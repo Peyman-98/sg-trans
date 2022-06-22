@@ -71,9 +71,9 @@ var data = {
   title: 'JavaScript Templates',
   license: {
     name: 'MIT license',
-    url: 'https://opensource.org/licenses/MIT'
+    url: 'https://opensource.org/licenses/MIT',
   },
-  features: ['lightweight & fast', 'powerful', 'zero dependencies']
+  features: ['lightweight & fast', 'powerful', 'zero dependencies'],
 };
 ```
 
@@ -126,7 +126,7 @@ require('http')
       data = {
         title: 'JavaScript Templates',
         url: 'https://github.com/blueimp/JavaScript-Templates',
-        features: ['lightweight & fast', 'powerful', 'zero dependencies']
+        features: ['lightweight & fast', 'powerful', 'zero dependencies'],
       };
     // Override the template loading method:
     tmpl.load = function (id) {
@@ -286,7 +286,8 @@ modified regular expression, by exchanging all occurrences of "{%" and "%}",
 e.g. with "[%" and "%]":
 
 ```js
-tmpl.regexp = /([\s'\\])(?!(?:[^[]|\[(?!%))*%\])|(?:\[%(=|#)([\s\S]+?)%\])|(\[%)|(%\])/g;
+tmpl.regexp =
+  /([\s'\\])(?!(?:[^[]|\[(?!%))*%\])|(?:\[%(=|#)([\s\S]+?)%\])|(\[%)|(%\])/g;
 ```
 
 By default, the plugin preserves whitespace (newlines, carriage returns, tabs
@@ -297,7 +298,11 @@ function, e.g. with the following code:
 var originalFunc = tmpl.func;
 tmpl.func = function (s, p1, p2, p3, p4, p5, offset, str) {
   if (p1 && /\s/.test(p1)) {
-    if (!offset || /\s/.test(str.charAt(offset - 1)) || /^\s+$/g.test(str.slice(offset))) {
+    if (
+      !offset ||
+      /\s/.test(str.charAt(offset - 1)) ||
+      /^\s+$/g.test(str.slice(offset))
+    ) {
       return '';
     }
     return ' ';
@@ -351,7 +356,9 @@ Use **print(str, true)** to add unescaped content to the output:
 Use **include(str, obj)** to include content from a different template:
 
 ```html
-<div>{% include('tmpl-link', {name: "Website", url: "https://example.org"}); %}</div>
+<div>
+  {% include('tmpl-link', {name: "Website", url: "https://example.org"}); %}
+</div>
 ```
 
 **If else condition**:
