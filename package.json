@@ -46,7 +46,7 @@
     "Selected",
     "Translations"
   ],
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
     "tslib": "~2.4"
   },
