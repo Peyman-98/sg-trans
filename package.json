@@ -38,7 +38,6 @@
     "prettier": "prettier --config .prettierrc --write .",
     "test:watch": "jest --watch",
     "prepare": "npm run build:release",
-    "preversion": "npm run lint",
     "version": "npm run prettier && git add .",
     "postversion": "git push && git push --tags"
   },
