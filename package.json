@@ -5,8 +5,8 @@
   "type": "module",
   "main": "build/src/main.js",
   "types": "build/src/main.d.ts",
-  "build": [
-    "build"
+  "files": [
+    "build/**/*"
   ],
   "engines": {
     "node": ">= 16.13 <17"
