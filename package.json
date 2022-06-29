@@ -48,6 +48,9 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@types/isomorphic-fetch": "0.0.36",
+    "isomorphic-fetch": "^3.0.0",
+    "node-fetch": "^2.6.7",
     "tslib": "~2.4"
   },
   "volta": {

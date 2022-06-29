@@ -1,10 +1,15 @@
 import { SelectedTrans } from '../src/main.js';
 
 describe('initialize SelectedTrans', () => {
-  const token = 'as12lolw1253plo';
-  const selectedTrans = SelectedTrans.init(token);
+  const selectedTrans = SelectedTrans.init({ key: '/languages' });
 
-  it('run getToken method', () => {
-    expect(selectedTrans.getToken()).toBe(token);
+  test('Fetch Languages', async () => {
+    const languages = await selectedTrans.getLanguages();
+    expect(languages).toBe(true);
+  });
+
+  test('Fetch Todo', async () => {
+    const todo = await selectedTrans.getTodo();
+    expect(todo.id).toBe(1);
   });
 });
